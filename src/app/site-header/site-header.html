@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="left">
+    <a routerLink="home" routerLinkActive="active">Home</a>
+    <a routerLink="catalog" routerLinkActive="active">Catalog</a>
+    <div class="cart" routerLinkActive="active">
+      <a routerLink="/cart-component"
+        >Cart
+        <span class="badge" *ngIf="cartVariable.count$ | async as c; else noCount">{{ c }}</span>
+        <ng-template #noCount></ng-template>
+      </a>
+    </div>
+  </div>
+  <div class="right">
+    <a routerLink="sign-in">Sign In</a>
+    <a href="" class="cta">Register</a>
+  </div>
+</div>

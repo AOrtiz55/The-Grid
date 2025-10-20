@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card">
+    <div class="imgBx">
+      <img [src]="getImageUrl(product)" [alt]="product.name" />
+    </div>
+    <div class="contentBx">
+      <h2>{{ product.name }}</h2>
+      <div class="size">
+        <h3>size</h3>
+        <span>3</span>
+      </div>
+      <div class="color">
+        <h3>color</h3>
+        <span></span>
+      </div>
+      <a routerLink="/catalog" [queryParams]="{ filter: 'Weapons' }"> Buy Now</a>
+    </div>
+  </div>
+</div>

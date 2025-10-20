@@ -1,0 +1,199 @@
+/* Container */
+/* Bar with text left + buttons right */
+.container {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.filters-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes label left, buttons right */
+
+  gap: 16px;
+  margin: 50px 0 69px;
+}
+
+/* Label style (theme-friendly) */
+.filters-label {
+  color: #e6f1ff;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: clamp(28px, 4vw, 52px);
+  text-shadow: 0 0 18px rgba(0, 229, 255, 0.35);
+}
+
+/* Right-aligned button group */
+.buttons-right {
+  display: flex;
+  flex-wrap: wrap; /* lets buttons wrap if not enough space */
+  justify-content: flex-end; /* keep them right-aligned */
+  gap: 12px;
+  max-width: 100%;
+}
+
+/* Neon pill buttons (same theme as before) */
+.button {
+  --bd: rgba(0, 229, 255, 0.35);
+  --bg1: rgba(0, 229, 255, 0.1);
+  --bg2: rgba(124, 77, 255, 0.1);
+  --txt: #e6f1ff;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 16px;
+  min-width: 90px;
+  border-radius: 999px;
+  border: 1px solid var(--bd);
+  color: var(--txt);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  background: linear-gradient(180deg, var(--bg1), rgba(0, 229, 255, 0.04)),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.1), var(--bg2));
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 12px rgba(0, 229, 255, 0.18), inset 0 0 14px rgba(0, 229, 255, 0.08);
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s, background-color 0.18s;
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(60% 100% at 50% 120%, rgba(124, 77, 255, 0.18), transparent 70%),
+    radial-gradient(60% 70% at 50% -10%, rgba(0, 229, 255, 0.22), transparent 70%);
+  opacity: 0.65;
+  filter: blur(8px);
+  transition: opacity 0.18s, filter 0.18s;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  border-color: #00e5ff;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.6), 0 0 26px rgba(0, 229, 255, 0.35),
+    inset 0 0 18px rgba(0, 229, 255, 0.18);
+}
+
+.button.active {
+  --bd: rgba(124, 77, 255, 0.55);
+  background: linear-gradient(180deg, rgba(124, 77, 255, 0.28), rgba(124, 77, 255, 0.12)),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.12), rgba(124, 77, 255, 0.18));
+  box-shadow: 0 0 12px rgba(124, 77, 255, 0.65), 0 0 32px rgba(124, 77, 255, 0.35),
+    inset 0 0 20px rgba(124, 77, 255, 0.22);
+  border-color: rgba(124, 77, 255, 0.55);
+}
+
+/* Mobile: stack label above buttons, keep buttons right-aligned or centered */
+@media (max-width: 720px) {
+  .filters-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .buttons-right {
+    justify-content: flex-start;
+  } /* change to center if you prefer */
+}
+
+/* Neon pill button */
+.button {
+  --bd: rgba(0, 229, 255, 0.35);
+  --bg1: rgba(0, 229, 255, 0.1);
+  --bg2: rgba(124, 77, 255, 0.1);
+  --txt: #e6f1ff;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 16px;
+  min-width: 90px;
+  border-radius: 18px;
+  border: 1px solid var(--bd);
+  color: var(--txt);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  background: linear-gradient(180deg, var(--bg1), rgba(0, 229, 255, 0.04)),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.1), var(--bg2));
+  backdrop-filter: blur(6px);
+
+  box-shadow: 0 2px 12px rgba(0, 229, 255, 0.18), inset 0 0 14px rgba(0, 229, 255, 0.08);
+
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease,
+    background-color 0.18s ease;
+}
+
+/* Subtle animated edge glow */
+.button::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(60% 100% at 50% 120%, rgba(124, 77, 255, 0.18), transparent 70%),
+    radial-gradient(60% 70% at 50% -10%, rgba(0, 229, 255, 0.22), transparent 70%);
+  opacity: 0.65;
+  filter: blur(8px);
+  transition: opacity 0.18s ease, filter 0.18s ease;
+}
+
+/* Hover / focus */
+.button:hover {
+  transform: translateY(-1px);
+  border-color: #00e5ff;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.6), 0 0 26px rgba(0, 229, 255, 0.35),
+    inset 0 0 18px rgba(0, 229, 255, 0.18);
+}
+.button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(10, 15, 20, 0.9), 0 0 0 4px rgba(0, 229, 255, 0.6),
+    0 0 26px rgba(0, 229, 255, 0.35), inset 0 0 18px rgba(0, 229, 255, 0.18);
+}
+
+/* Active (routerLinkActive adds .active) */
+.button.active {
+  --bd: rgba(124, 77, 255, 0.55);
+  background: linear-gradient(180deg, rgba(124, 77, 255, 0.28), rgba(124, 77, 255, 0.12)),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.12), rgba(124, 77, 255, 0.18));
+  box-shadow: 0 0 12px rgba(124, 77, 255, 0.65), 0 0 32px rgba(124, 77, 255, 0.35),
+    inset 0 0 20px rgba(124, 77, 255, 0.22);
+  border-color: rgba(124, 77, 255, 0.55);
+}
+
+/* Pressed */
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 0 8px rgba(0, 229, 255, 0.45), inset 0 0 20px rgba(0, 229, 255, 0.22);
+}
+
+/* Optional: compact variant */
+.button.is-compact {
+  padding: 8px 12px;
+  min-width: auto;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .button::after {
+    transition: none;
+  }
+}
+a.button.active {
+  border-bottom: 4px solid #d25ca1;
+}

@@ -1,0 +1,175 @@
+<!-- HERO / BANNER -->
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="brand"><span class="dot"></span> GRID MARKET</div>
+      <h1 class="title">
+        Skins & Bundles from the <span style="color: var(--accent)">Neon Grid</span>
+      </h1>
+      <p class="lede">
+        Outfit your avatar with luminous <strong>weapons</strong>, sleek <strong>suits</strong>,
+        high‑velocity <strong>autos</strong>, and anti‑grav <strong>flight</strong>. Bundle up and
+        save with curated combos.
+      </p>
+      <div class="hero-cta">
+        <a class="btn" href="#collections" aria-label="Jump to collections"
+          ><span>Browse Collections</span></a
+        >
+        <a class="btn alt" href="#bundles" aria-label="Jump to bundles"
+          ><span>View Bundles</span></a
+        >
+        <span class="chip" aria-label="live status"
+          ><span class="pulse" aria-hidden="true"></span> In‑stock drops</span
+        >
+      </div>
+    </div>
+    <div class="hero-card" aria-hidden="true">
+      <div class="screen">
+        <div class="scan-line"></div>
+        <svg width="200" height="200" viewBox="0 0 200 200" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop stop-color="rgba(0,229,255,.9)" offset="0" />
+              <stop stop-color="rgba(124,77,255,.9)" offset="1" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="70" fill="none" stroke="url(#g1)" stroke-width="2" />
+          <circle
+            cx="100"
+            cy="100"
+            r="50"
+            fill="none"
+            stroke="url(#g1)"
+            stroke-width="2"
+            opacity=".6"
+          />
+          <path
+            d="M40 140 L100 40 L160 140 Z"
+            fill="none"
+            stroke="url(#g1)"
+            stroke-width="2"
+            opacity=".9"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- COLLECTIONS: 4 CARDS -->
+  <section id="collections" class="wrap">
+    <div class="head">
+      <h2>Collections</h2>
+      <p>Pick a category to explore individual items.</p>
+    </div>
+    <div class="grid">
+      <!-- Weapons -->
+      <article class="card" aria-label="Weapons category card">
+        <span class="badge">Weapons</span>
+        <div>
+          <div class="art" role="img" aria-label="Neon weapon art placeholder"></div>
+          <h3>Resonator & Arsenal</h3>
+          <div class="meta"><span>18 items</span><span class="price">from 300C</span></div>
+        </div>
+        <div class="cta-row">
+          <a class="ghost" href="#">Preview</a>
+          <a class="solid" routerLink="/catalog" [queryParams]="{ filter: 'Weapons' }">Shop</a>
+        </div>
+      </article>
+
+      <!-- Suits -->
+      <article class="card" aria-label="Suits category card">
+        <span class="badge">Suits</span>
+        <div>
+          <div class="art" role="img" aria-label="Neon suit art placeholder"></div>
+          <h3>Quantum Suits</h3>
+          <div class="meta"><span>24 items</span><span class="price">from 500C</span></div>
+        </div>
+        <div class="cta-row">
+          <a class="ghost" href="#">Preview</a>
+          <a class="solid" href="#">Shop</a>
+        </div>
+      </article>
+
+      <!-- Auto -->
+      <article class="card" aria-label="Auto category card">
+        <span class="badge">Grid Runners</span>
+        <div>
+          <div class="art" role="img" aria-label="Neon vehicle art placeholder"></div>
+          <h3>Light Cycles</h3>
+          <div class="meta"><span>9 items</span><span class="price">from 2,000C</span></div>
+        </div>
+        <div class="cta-row">
+          <a class="ghost" href="#">Preview</a>
+          <a class="solid" href="#">Shop</a>
+        </div>
+      </article>
+
+      <!-- Flight -->
+      <article class="card" aria-label="Flight category card">
+        <span class="badge">Null Gliders</span>
+        <div>
+          <div class="art" role="img" aria-label="Neon flight art placeholder"></div>
+          <h3>Light glider</h3>
+          <div class="meta"><span>6 items</span><span class="price">from 3,200C</span></div>
+        </div>
+        <div class="cta-row">
+          <a class="ghost" href="#">Preview</a>
+          <a class="solid" href="#">Shop</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- BUNDLES: 3 CARDS -->
+  <section id="bundles" class="wrap bundle">
+    <div class="head">
+      <h2>Bundle Packs</h2>
+      <p>Curated combos with neon‑level savings.</p>
+    </div>
+    <div class="grid">
+      <!-- Suit + Weapons -->
+      <article class="card" aria-label="Suit and Weapons bundle">
+        <span class="badge">Save 15%</span>
+        <div>
+          <div class="art" role="img" aria-label="Bundle art placeholder"></div>
+          <h3>Operator Pack: Suit + Weapons</h3>
+          <div class="meta"><span>5 style</span><span class="price">4,200C</span></div>
+        </div>
+        <div class="cta-row">
+          <a class="ghost" href="#">Details</a>
+          <a class="solid" href="#">Add Bundle</a>
+        </div>
+      </article>
+
+      <!-- Suit + Bike -->
+      <article class="card" aria-label="Suit and Bike bundle">
+        <span class="badge">Hot Drop</span>
+        <div>
+          <div class="art" role="img" aria-label="Bundle art placeholder"></div>
+          <h3>Racer Pack: Suit + cycle</h3>
+          <div class="meta"><span>3 colorways</span><span class="price">5,600C</span></div>
+        </div>
+        <div class="cta-row">
+          <a class="ghost" href="#">Details</a>
+          <a class="solid" href="#">Add Bundle</a>
+        </div>
+      </article>
+
+      <!-- Vehicles (multi) -->
+      <article class="card" aria-label="Vehicles bundle">
+        <span class="badge">Limited</span>
+        <div>
+          <div class="art" role="img" aria-label="Vehicles bundle art placeholder"></div>
+          <h3>Vehicles Pack</h3>
+          <div class="meta"><span>Cycle + Glider</span><span class="price">7,900C</span></div>
+        </div>
+        <div class="cta-row">
+          <a class="ghost" href="#">Details</a>
+          <a class="solid" href="#">Add Bundle</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>

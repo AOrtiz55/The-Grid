@@ -1,0 +1,53 @@
+<section class="gm-page">
+  <!-- <header class="hero">
+    <div class="wrap">
+      <h1 class="title">Grid Market — Product</h1>
+      <p class="lede">TRON-inspired product view with neon glows and glass panels.</p>
+    </div>
+  </header> -->
+
+  <main class="wrap">
+    <article class="gm-card gm-product product" *ngIf="product">
+      <div class="product-details">
+        <!-- <img class="product-img" [src]="getImageUrl(product)" [alt]="[product.name]" /> -->
+
+        <img class="product-img" />
+        <div class="product-info">
+          <div class="title">Grid items - {{ product.name }}</div>
+          <div class="panel">
+            <div class="tron-desc">
+              <h3 class="td-title">{{ product.description }}</h3>
+            </div>
+          </div>
+          <div class="category">Digital Type: {{ product.category }}</div>
+        </div>
+      </div>
+
+      <div class="price">
+        <div [ngClass]="getDiscount(product)">{{ product.price | currency }}</div>
+        <div *ngIf="product.discount > 0" class="discount">
+          {{ product.price * (1 - product.discount) | currency }}
+        </div>
+        <button class="cta" (click)="buyButtonClicked()">Buy</button>
+      </div>
+    </article>
+  </main>
+</section>
+
+<!-- <div class="product" *ngIf="product">
+  <div class="product-details">
+    <img [src]="getImageUrl(product)" [alt]="[product.name]" />
+    <div class="product-info">
+      <div class="name">{{ product.name }}</div>
+      <div class="description">{{ product.description }}</div>
+      <div class="category">Digital Type: {{ product.category }}</div>
+    </div>
+  </div>
+  <div class="price">
+    <div [ngClass]="getDiscount(product)">{{ product.price | currency }}</div>
+    <div *ngIf="product.discount > 0" class="discount">
+      {{ product.price * (1 - product.discount) | currency }}
+    </div>
+    <button class="cta" (click)="buyButtonClicked()">Buy</button>
+  </div>
+</div> -->

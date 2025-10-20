@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="filters-bar">
+    <div class="filters-label title">Filter grid market</div>
+
+    <div class="filters buttons-right" role="group" aria-label="Part type filters">
+      <a
+        class="button"
+        routerLink="/catalog"
+        [queryParams]="{ filter: 'Weapons' }"
+        routerLinkActive="active"
+        >Weapons</a
+      >
+      <a
+        class="button"
+        routerLink="/catalog"
+        [queryParams]="{ filter: 'Grid Runners' }"
+        routerLinkActive="active"
+        >Grid Runners</a
+      >
+      <a
+        class="button"
+        routerLink="/catalog"
+        [queryParams]="{ filter: 'Null Gliders' }"
+        routerLinkActive="active"
+        >Null Gliders</a
+      >
+      <a
+        class="button"
+        routerLink="/catalog"
+        [queryParams]="{ filter: 'Suits' }"
+        routerLinkActive="active"
+        >Suits</a
+      >
+      <a
+        class="button"
+        routerLink="/catalog"
+        [queryParams]="{ filter: 'Bundle' }"
+        routerLinkActive="active"
+        >Bundles</a
+      >
+      <a
+        class="button"
+        routerLink="/catalog"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="active"
+        >All</a
+      >
+    </div>
+  </div>
+
+  <ul class="products">
+    <li class="product-item" *ngFor="let product of getFilterProducts()">
+      <app-product-details [product]="product" (buy)="addToCart(product)"></app-product-details>
+    </li>
+  </ul>
+</div>
