@@ -12,14 +12,17 @@
 **Home / Landing**
 
 ![image](https://github.com/user-attachments/assets/e88950c0-d3e1-428a-b8b1-c4b3b22912ac)
+![image](https://github.com/user-attachments/assets/9e64c899-4bb2-44df-806a-b2114b5793cd)
 
 **Catalog**
 
-![TRON grid animation](assets/preview/grid.gif)
+![image](https://github.com/user-attachments/assets/f4f6f6ee-3b06-42f6-a006-c72104c29afa)
+
 
 **Cart**
 
-![TRON grid animation](assets/preview/grid.gif)
+![image](https://github.com/user-attachments/assets/00e8ec72-de71-4c2a-a159-1267737899a1)
+
 
 **Mobile Layout**
 
@@ -149,19 +152,5 @@ If you prefer an npm script workflow, add these to `package.json`:
 
 ---
 
-## 🆘 Troubleshooting
-
-- **Images not showing in README?**
-
-  - Ensure paths are relative (e.g., `assets/preview/hero.webp`).
-  - Check case sensitivity: `Hero.webp` ≠ `hero.webp`.
-  - GitHub sometimes caches; commit a small change to README to bust cache.
-
-- **Neon looks dull?**
-
-  - Verify your monitor’s color profile; consider sRGB exports.
-  - Increase glow with `filter: drop-shadow()` rather than heavy box‑shadows.
-
----
 
 > **NOTE:** This README is structured so that images will show **in the README itself** while site is still under construction.
