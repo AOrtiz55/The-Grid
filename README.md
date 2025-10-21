@@ -16,7 +16,7 @@ Drop your images into `assets/preview/` and they will render here in the README.
 
 **Hero / Landing**
 
-![image](https://github.com/user-attachments/assets/images/cartpage.png)
+![image](https://github.com/user-attachments/assets/e88950c0-d3e1-428a-b8b1-c4b3b22912ac)
 
 **Neon Grid Animation**
 
